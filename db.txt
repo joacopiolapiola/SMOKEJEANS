@@ -21,5 +21,5 @@ CREATE TABLE categorias (
 CREATE TABLE admins (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
-    password VARCHAR(255),
+    password VARCHAR(255)
 );
