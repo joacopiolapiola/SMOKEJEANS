@@ -10,10 +10,8 @@ Para un sitio de ropa con esas características, no necesitas un framework compl
 
 * Página web pública para mostrar productos.
 * Base de datos.
-* Dos tipos de usuarios:
+* **Administrador**: gestiona productos, categorías, imágenes y usuarios.
 
-  * **Administrador**: gestiona productos, categorías, imágenes y usuarios.
-  * **Cliente**: puede registrarse, guardar favoritos o consultar información (opcional).
 * No hay carrito ni pagos online.
 * Cada producto tiene un botón de **WhatsApp** para contactar y concretar la compra.
 
@@ -25,7 +23,7 @@ Para un sitio de ropa con esas características, no necesitas un framework compl
 
 * HTML
 * CSS
-* JavaScript puro (Vanilla JS)
+* PHP
 
 ### Backend
 
@@ -33,7 +31,7 @@ Para un sitio de ropa con esas características, no necesitas un framework compl
 
 ### Base de datos
 
-* MySQL o MariaDB
+* MariaDB
 
 ### Servidor
 
@@ -60,42 +58,16 @@ tienda-ropa/
 │   ├── crear-producto.php
 │   ├── editar-producto.php
 │   └── usuarios.php
-│
-├── assets/
-│   ├── css/
-│   ├── js/
-│   └── img/
-│
+|
 ├── uploads/
 │   └── productos/
 │
 ├── config/
 │   └── conexion.php
-│
-└── includes/
-    ├── header.php
-    ├── footer.php
-    └── auth.php
-```
 
 ---
 
 # Base de datos
-
-## Tabla usuarios
-
-```sql
-CREATE TABLE usuarios (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nombre VARCHAR(100),
-    email VARCHAR(150) UNIQUE,
-    password VARCHAR(255),
-    rol ENUM('admin','cliente') DEFAULT 'cliente',
-    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
----
 
 ## Tabla categorias
 
@@ -143,7 +115,7 @@ Ejemplo:
 
 ```html
 <a
- href="https://wa.me/5491112345678?text=Hola,%20quiero%20consultar%20por%20la%20remera%20negra"
+ href="https://wa.me/5491136989253?text=Hola,%20quiero%20consultar%20por%20la%20remera%20negra"
  target="_blank">
  Comprar por WhatsApp
 </a>
@@ -160,8 +132,6 @@ Puede:
 * Eliminar productos.
 * Subir imágenes.
 * Crear categorías.
-* Gestionar usuarios.
-
 ---
 
 # CMS sencillo
