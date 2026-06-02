@@ -2,6 +2,10 @@ smokejeans tienda  que acepta carga desde base de datos y
 despligue de los productos con link a whatsapp para concretar la venta
 
 
+-Link de whatsapp se autogenera con la info de la base de datos
+-dentro de la tabla producto necesitamos linkear a las imagenes para mostrarlas
+-necesitamos vaciar la base de imagenes cada 2 meses.
+
 sugerencia de chatgpt
 
 Para un sitio de ropa con esas características, no necesitas un framework complejo. De hecho, una arquitectura simple puede ser más fácil de mantener y entender.
