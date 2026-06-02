@@ -8,7 +8,6 @@ CREATE TABLE productos (
     precio DECIMAL(10,2),
     imagen VARCHAR(255),
     categoria_id INT,
-    whatsapp_link VARCHAR(255),
     dispo TINYINT(1) DEFAULT 1,
     FOREIGN KEY (categoria_id)
         REFERENCES categorias(id)
