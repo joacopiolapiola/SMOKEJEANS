@@ -12,12 +12,21 @@ CREATE TABLE admins (
     password VARCHAR(255)
 );
 
+CREATE TABLE product_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    file_path VARCHAR(255) NOT NULL,
+    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(150),
     descripcion TEXT,
     precio DECIMAL(10,2),
-    imagen VARCHAR(255),
+    imagen1 INT,
+    imagen2 INT,
+    imagen3 INT,
+    imagen4 INT,
     categoria_id INT,
     dispo TINYINT(1) DEFAULT 1,
     FOREIGN KEY (categoria_id)
