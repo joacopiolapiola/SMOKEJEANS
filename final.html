@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;">
+    <section style="background-color: brown; color: white;">
+    <h3>subir producto</h3>
+
+    <form action="producto.php" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image1" accept="image/*" required><br>
+        <input type="file" name="image2" accept="image/*" ><br>
+        <input type="file" name="image3" accept="image/*" ><br>
+        <input type="file" name="image4" accept="image/*" ><br>
+        <input type="number" name="precio" id="precio" placeholder="20000"><br>
+        <input type="text" name="descripcion" id="descripcion" placeholder="reme violada"><br>
+        <input type="number" name="categoria" id="categoria" placeholder="2"><br>
+        <button type="submit" name="submit">upload prod</button><br>
+    </form>
+    </section>
+
+    <section style="background-color: blueviolet; color: white;">
+        <h3>subir categoria</h3>
+        <form action="cats.php" method="get">
+            <input type="text" name="nombre" id="" placeholder="nombra la categoria">
+            <input type="submit" value="mandalee">
+        </form>
+    </section>
+</body>
+</html>
