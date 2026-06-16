@@ -11,8 +11,7 @@ CREATE TABLE admins (
 );
 CREATE TABLE product_images (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    file_path VARCHAR(255) NOT NULL,
-    uploaded_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    file_path VARCHAR(255) NOT NULL
 );
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -25,14 +24,19 @@ CREATE TABLE productos (
     imagen4 INT,
     categoria_id INT,
     dispo TINYINT(1) DEFAULT 1,
-    FOREIGN KEY (categoria_id)
-        REFERENCES categorias(id),
     FOREIGN KEY (imagen1)
         REFERENCES product_images(id),
     FOREIGN KEY (imagen2)
         REFERENCES product_images(id),
     FOREIGN KEY (imagen3)
         REFERENCES product_images(id),
-    FOREIGN KEY (imagen4)
+    FOREIGN KEY (imagen4))
+CREATE TABLE prod_categoria (
+    prod_id INT NOT NULL,
+    categoria_id INT NOT NULL,
+    PRIMARY KEY (prod_id, categoria_id),
+    FOREIGN KEY (prod_id) REFERENCES productos(id) ON DELETE CASCADE,
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
+);
         REFERENCES product_images(id)
 );
