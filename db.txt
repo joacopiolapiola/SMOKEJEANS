@@ -25,13 +25,13 @@ CREATE TABLE productos (
     categoria_id INT,
     dispo TINYINT(1) DEFAULT 1,
     FOREIGN KEY (imagen1)
-        REFERENCES product_images(file_path),
+        REFERENCES product_images(id),
     FOREIGN KEY (imagen2)
-        REFERENCES product_images(file_path),
+        REFERENCES product_images(id),
     FOREIGN KEY (imagen3)
-        REFERENCES product_images(file_path),
+        REFERENCES product_images(id),
     FOREIGN KEY (imagen4)
-        REFERENCES product_images(file_path)
+        REFERENCES product_images(id)
 );
 CREATE TABLE prod_categoria (
     prod_id INT NOT NULL,
