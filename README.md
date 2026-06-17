@@ -1,3 +1,26 @@
+
+<h1>
+    hacer
+</h1>
+<ul>
+    <li>CATEGORIAS + PRODUCTO SUBIDA JUNTOS</li>
+    <li>fotos mas producto mas descripcion juntos</li>
+    <li>indice de productos mostrando las fotos</li>
+    <li>inicio de sesiones</li>
+    <li>indice de funciones de admin</li>
+    <li>indice por categoria</li>
+    <li>que muestre las categorias cuando vas a subir el prodcuto y que las marques con un select</li>
+    <li>filtrar por precio</li>
+    <li></li>
+</ul>
+
+
+
+
+
+
+
+
 smokejeans tienda  que acepta carga desde base de datos y 
 despligue de los productos con link a whatsapp para concretar la venta
 
