@@ -30,7 +30,7 @@ CREATE TABLE productos (
         REFERENCES product_images(id),
     FOREIGN KEY (imagen3)
         REFERENCES product_images(id),
-    FOREIGN KEY (imagen4))
+    FOREIGN KEY (imagen4));
 CREATE TABLE prod_categoria (
     prod_id INT NOT NULL,
     categoria_id INT NOT NULL,
