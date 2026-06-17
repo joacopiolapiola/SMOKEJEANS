@@ -25,18 +25,18 @@ CREATE TABLE productos (
     categoria_id INT,
     dispo TINYINT(1) DEFAULT 1,
     FOREIGN KEY (imagen1)
-        REFERENCES product_images(id),
+        REFERENCES product_images(file_path),
     FOREIGN KEY (imagen2)
-        REFERENCES product_images(id),
+        REFERENCES product_images(file_path),
     FOREIGN KEY (imagen3)
-        REFERENCES product_images(id),
-    FOREIGN KEY (imagen4));
+        REFERENCES product_images(file_path),
+    FOREIGN KEY (imagen4)
+        REFERENCES product_images(file_path)
+);
 CREATE TABLE prod_categoria (
     prod_id INT NOT NULL,
     categoria_id INT NOT NULL,
     PRIMARY KEY (prod_id, categoria_id),
     FOREIGN KEY (prod_id) REFERENCES productos(id) ON DELETE CASCADE,
     FOREIGN KEY (categoria_id) REFERENCES categorias(id) ON DELETE CASCADE
-);
-        REFERENCES product_images(id)
 );
