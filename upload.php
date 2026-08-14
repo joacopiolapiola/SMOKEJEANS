@@ -1,17 +1,6 @@
 <?php
-// 1. Establish database connection using PDO
-$host = 'localhost';
-$db   = 'smoke';
-$user = 'root';
-$pass = '';
+require_once "config.php";
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$db;charset=utf8mb4", $user, $pass, [
-        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
-    ]);
-} catch (PDOException $e) {
-    die("Database connection failed: " . $e->getMessage());
-}
 
 // 2. Check if form is submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['image'])) {

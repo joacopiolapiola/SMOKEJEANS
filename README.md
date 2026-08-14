@@ -11,7 +11,6 @@
     <li>indice por categoria</li>
     <li>que muestre las categorias cuando vas a subir el prodcuto y que las marques con un select</li>
     <li>filtrar por precio</li>
-    <li></li>
 </ul>
 
 
