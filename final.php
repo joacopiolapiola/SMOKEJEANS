@@ -40,8 +40,11 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_prod'])) {
 
-        $file = $_POST['image1'];
-        echo "<p> ENTRAMOOOOOO </p>";
+        if (!isset($_FILES['image1'])) {
+            die("No se recibió ninguna imagen.");
+        }
+
+        $file = $_FILES['image1'];
         // 3. Define allowed properties for validation
         $allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/jpg'];
         $maxFileSize = 2 * 1024 * 1024; // 2 Megabytes
@@ -79,11 +82,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_prod'])) {
             ':file_path' => $relativePath,
             ]);
         
-            echo "<p> se guardo la  imagden bienn guardado de imagen</p>";
-        
         } else {
           
-        echo "<p> NO se guardo la imagen. </p>";
+        die ("<p> NO se guardo la imagen. </p>");
         
         }
     }
@@ -127,6 +128,55 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_prod'])) {
     $images = $stmt->fetchAll(PDO::FETCH_ASSOC);                            
 
     foreach ($images as $img) {
+        <h1>CSS carousel multiple items per page</h1>
+<ul>
+  <li>
+    <h2>Item 1</h2>
+  </li>
+  <li>
+    <h2>Item 2</h2>
+  </li>
+  <li>
+    <h2>Item 3</h2>
+  </li>
+  <li>
+    <h2>Item 4</h2>
+  </li>
+  <li>
+    <h2>Item 5</h2>
+  </li>
+  <li>
+    <h2>Item 6</h2>
+  </li>
+  <li>
+    <h2>Item 7</h2>
+  </li>
+  <li>
+    <h2>Item 8</h2>
+  </li>
+  <li>
+    <h2>Item 9</h2>
+  </li>
+  <li>
+    <h2>Item 10</h2>
+  </li>
+  <li>
+    <h2>Item 11</h2>
+  </li>
+  <li>
+    <h2>Item 12</h2>
+  </li>
+  <li>
+    <h2>Item 13</h2>
+  </li>
+  <li>
+    <h2>Item 14</h2>
+  </li>
+  <li>
+    <h2>Item 15</h2>
+  </li>
+</ul>
+
         echo '<img src="' . htmlspecialchars($img['file_path']) . '" alt="Product Image" style="max-width:300px;"><br>';
         }
     ?>
