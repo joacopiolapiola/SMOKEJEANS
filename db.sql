@@ -27,7 +27,8 @@ CREATE TABLE productos (
     nombre VARCHAR(150) NOT NULL,
     descripcion TEXT,
     precio DECIMAL(10,2) NOT NULL,
-    dispo TINYINT(1) DEFAULT 1
+    dispo TINYINT(1) DEFAULT 1,
+    subido TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE product_images (
