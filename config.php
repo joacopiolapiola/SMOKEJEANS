@@ -5,6 +5,8 @@ $user    = 'root';
 $pass    = '';
 $charset = 'utf8mb4';
 
+$numerowhatsapp = '5491171013073'; // Reemplaza con tu número de WhatsApp
+
 $options = [
     PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
     PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
