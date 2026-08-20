@@ -22,33 +22,22 @@ CREATE TABLE admins (
     password VARCHAR(255) NOT NULL
 );
 
-CREATE TABLE product_images (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    file_path VARCHAR(255) NOT NULL
-);
-
 CREATE TABLE productos (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(150) NOT NULL,
     descripcion TEXT,
     precio DECIMAL(10,2) NOT NULL,
-    imagen1 INT NOT NULL,
-    imagen2 INT,
-    imagen3 INT,
-    imagen4 INT,
-    dispo TINYINT(1) DEFAULT 1,
+    dispo TINYINT(1) DEFAULT 1
+);
 
-    FOREIGN KEY (imagen1)
-        REFERENCES product_images(id),
+CREATE TABLE product_images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    producto_id INT NOT NULL,
+    file_path VARCHAR(255) NOT NULL,
 
-    FOREIGN KEY (imagen2)
-        REFERENCES product_images(id),
-
-    FOREIGN KEY (imagen3)
-        REFERENCES product_images(id),
-
-    FOREIGN KEY (imagen4)
-        REFERENCES product_images(id)
+    FOREIGN KEY (producto_id)
+        REFERENCES productos(id)
+        ON DELETE CASCADE
 );
 
 CREATE TABLE prod_categoria (
